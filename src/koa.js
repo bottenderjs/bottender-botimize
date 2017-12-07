@@ -8,9 +8,9 @@ export default function botimizeMiddleware(bot, { apiKey, platform }) {
 
   setInterceptors(bot, botimize);
 
-  return (req, res, next) => {
+  return ({ request }, next) => {
     botimize.logIncoming({
-      ...req.body,
+      ...request.body,
       accessToken,
     });
 
