@@ -14,6 +14,6 @@ export default function botimizeMiddleware(bot, { apiKey, platform }) {
       accessToken,
     });
 
-    next();
+    return next();
   };
 }
